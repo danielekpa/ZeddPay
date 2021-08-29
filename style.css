@@ -1,0 +1,142 @@
+
+/* Body style */
+
+body {
+    margin:0;
+    background-color: rgb(18, 18, 18, 1);
+    opacity: 90%;
+    background-blend-mode: darken;
+}
+
+/* nav-bar begins */
+
+ul {
+    position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(18, 18, 18, 1);
+
+  top: 15px;
+  width: 100%;
+}
+
+#ul{
+    margin: 0 40px;
+    color: #e9e9e9;
+    font-style: bold;
+    font-family: Poppins;
+    float: left;
+}
+
+li {
+  float: right;
+  padding-right: 40px;
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 10px 5px;
+  text-decoration: none;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.section1{
+    padding:20px;
+    margin-bottom:0px;
+}
+
+.section h1{
+    text-align: center;
+}
+
+.hee{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    text-align: center;
+    color: #fafafa;
+padding-top: 30px;
+}
+
+.he{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.009em;
+    color: #e9e9e9;
+}
+
+.img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search-wrapper {
+    width: 530px;
+    margin: 20px auto 0px auto;
+    border-radius: 40px;
+    background: transparent;
+    padding-bottom: 40px;
+
+}
+
+/* Form text input */
+
+.search-wrapper input {
+  padding-left: 20px;
+    width: 282px;
+    height: 55px;
+    float: left;   
+    border: 0;
+    background: rgba(66, 66, 66, 0.53);
+    border-radius: 8px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+/* identical to box height */
+text-align: center;
+letter-spacing: 0.009em;
+color: #fafafafa;
+}
+
+/* Form submit button */
+
+.search-wrapper button {
+    overflow: visible;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 55px;
+    width: 230px;
+    font: 'poppins';
+    background: #0089FF;
+    border-radius: 8px;
+    color: #fafafa;
+}
+
+@media (min-width: 600px) {
+  .hee{
+    font-size: 18px;
+  }
+}

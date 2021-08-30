@@ -1,4 +1,3 @@
-
 /* Body style */
 
 body {
@@ -18,16 +17,19 @@ ul {
   overflow: hidden;
   background-color: rgb(18, 18, 18, 1);
 
-  top: 15px;
+  top: 20px;
   width: 100%;
 }
 
 #ul{
-    margin: 0 40px;
+    margin: 0 20px;
     color: #e9e9e9;
     font-style: bold;
     font-family: Poppins;
     float: left;
+    width: 40px;
+    height: 40px;
+    
 }
 
 li {
@@ -51,10 +53,9 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
-
 .section1{
     padding:20px;
-    margin-bottom:0px;
+    margin-top: 50px;
 }
 
 .section h1{
@@ -67,18 +68,21 @@ li a:hover:not(.active) {
     font-weight: 600;
     font-size: 36px;
     line-height: 54px;
-    text-align: center;
+    float: left;
     color: #fafafa;
 padding-top: 30px;
 }
 
+.section2{
+  padding-top: 250px;
+
+}
 .he{
     font-family: Poppins;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 27px;
-    text-align: center;
     letter-spacing: 0.009em;
     color: #e9e9e9;
 }
@@ -86,17 +90,21 @@ padding-top: 30px;
 .img{
     display: block;
     margin-right: auto;
-    margin-left: auto;
+    margin-top: -15px;
 }
+
+
 
 .search-wrapper {
-    width: 530px;
-    margin: 20px auto 0px auto;
-    border-radius: 40px;
-    background: transparent;
-    padding-bottom: 40px;
+  width: 530px;
+  margin: 20px auto 0px auto;
+  border-radius: 40px;
+  background: transparent;
+  padding-bottom: 40px;
+  float: left;
 
 }
+
 
 /* Form text input */
 
@@ -114,29 +122,30 @@ padding-top: 30px;
     font-size: 12px;
     line-height: 18px;
 /* identical to box height */
-text-align: center;
-letter-spacing: 0.009em;
-color: #fafafafa;
+    text-align: center;
+    letter-spacing: 0.009em;
+    color: #fafafafa;
 }
-
 /* Form submit button */
 
 .search-wrapper button {
-    overflow: visible;
-    float: right;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    height: 55px;
-    width: 230px;
-    font: 'poppins';
-    background: #0089FF;
-    border-radius: 8px;
-    color: #fafafa;
+  overflow: visible;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 55px;
+  width: 230px;
+  font: 'poppins';
+  background: #0089FF;
+  border-radius: 8px;
+  color: #fafafa;
 }
 
-@media (min-width: 600px) {
-  .hee{
-    font-size: 18px;
-  }
+.illus img{
+  float: right;
+  margin-top: -320px;
+  height: 430px;
+  width: 430px;
+ 
 }

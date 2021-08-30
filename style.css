@@ -218,7 +218,7 @@ li a:hover:not(.active) {
 
 .zeddHome__form input {
     margin-bottom: 15px;
-    padding-left: 20px;
+    padding-left: 20%;
     width: 100%;
     height: 48px;
     border: 0;
@@ -226,7 +226,6 @@ li a:hover:not(.active) {
     border-radius: 8px;
     font-size: 12px;
     line-height: 18px;
-    text-align: center;
     letter-spacing: 0.009em;
     color: #fafafafa;
     outline: 0;

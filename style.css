@@ -212,8 +212,8 @@ li a:hover:not(.active) {
 }
 
 .zeddHome__modalOverlay {
-    background: #0C0C0C;
-    opacity: 0.9;
+    background: #000000a8;
+    background-blend-mode: darken;
     position: absolute;
     top: 0;
     height: 100vh;

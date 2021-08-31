@@ -1,9 +1,10 @@
 <html>
 
 <head>
-    <title> ZeddPay</title>
+    <title>ZeddPay - Payment for Gen-Z</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -42,36 +43,87 @@
         </ul>
     </div>
     <div class="zeddHome__desktop">
-        <!-- Zedd logo-->
-        <ul>
-            <li id="ul"><img src="images/Zedd.svg"></li>
-            <li><img src="images/Group 61.svg"></a>
-            </li>
-            <li><img src="images/Group 60.svg"></a>
-            </li>
-            <li><img src="images/Group 59.svg"></a>
-            </li>
-        </ul>
-        <section class="section1">
-            <h1 class="hee">Purchase Anything
-                <br> Online with Your
-                <br> Airtime🤩
-                <img class="img" src="images/line.svg">
-            </h1>
-            <p class="he">Shop online, go premium, get assets, pay for services and most
-                <br> importantly purchase that new Call of Duty weapon with
-                <br> airtime
-            </p>
-            <div class="e129_164"></div>
-            <div class="e129_165"></div>
-        </section>
-        <form class="search-wrapper">
-            <input type="email" placeholder="enter your email address..." required>
-            <button type="submit">Join the Waitlist</button>
-        </form>
-        <br>
-        <br>
+        <div class="zeddHome__cover">
+            <img src="images/Zedd.svg" class="zeddHome__logo">
+        </div>
+        <div class="zeddHome__topbar">
+            <a href="/" class="zeddHome__brandLogo">
+                <img src="images/Zedd.svg" class="zeddHome__logo">
+            </a>
+            <ul class="zeddHome__socialLinks">
+                <li>
+                    <a href="#">
+                        <img src="images/twitter.svg" class="zeddHome__socialIcon"></a>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/instagram.svg" class="zeddHome__socialIcon"></a>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/facebook.svg" class="zeddHome__socialIcon"></a>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="zeddHome__container">
+            <section class="section1">
+                <div class="zeddHome__tagline">
+                    <div class="zeddHome__tagline heading">
+                        <h2>
+                            <span class="zeddHome__headerText">Purchase </span>
+
+                        </h2>
+                        <h2>
+                            <span class="zeddHome__headerText">Online with Your</span>
+
+                        </h2>
+                        <h2>
+                            <span class="zeddHome__headerText">Airtime🤩</span>
+                        </h2>
+                        <img class="img" src="images/line.svg">
+                    </div>
+                    <img class="img" src="images/line.svg">
+                </div>
+                <section class="section2">
+                    <p class="he">Shop online, go premium, get assets, pay for services and most importantly purchase that new Call of Duty weapon with just your airtime
+                    </p>
+                </section>
+                <form class="search-wrapper">
+                    <input type="email" placeholder="enter your email address..." required>
+                    <button type="submit">Request Access</button>
+                </form>
+            </section>
+            <section class="zeddHome__illustration">
+                <div class="illus">
+                    <img src="images/illus.svg" alt="">
+                </div>
+            </section>
+        </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        let tl = gsap.timeline({
+            defaults: {
+                ease: "SlowMo.easeOut"
+            }
+        })
+        tl.to('.zeddHome__cover', {
+            y: '100%',
+            duration: 3,
+            delay: 0.8
+        })
+        tl.to('.zeddHome__headerText', {
+            y: '0%',
+            duration: 0.65,
+            stagger: 0.2,
+        })
+    </script>
 </body>
 
 </html>

@@ -33,12 +33,14 @@
             <button type="submit">Request Access</button>
         </form>
         <ul class="zeddHome__socialLinks">
-            <li><a href="https://twitter.com/zeddpay"><img src="images/twitter.svg" class="zeddHome__socialIcon"> </a>
-            </li>
-    <li><a href="https://Instagram.com/zeddapp"> <img src="images/instagram.svg" class="zeddHome__socialIcon"><a href=""> </a>
+            <li>
+                <a href="https://twitter.com/zeddpay" target="_blank"><img src="images/twitter.svg" class="zeddHome__socialIcon"> </a>
             </li>
             <li>
-               <a href="https://Facebook.com/zeddpay">  <img src="images/facebook.svg" class="zeddHome__socialIcon"><a href=""> </a>
+                <a href="https://instagram.com/zeddapp" target="_blank"> <img src="images/instagram.svg" class="zeddHome__socialIcon"></a>
+            </li>
+            <li>
+                <a href="https://facebook.com/zeddpay" target="_blank"> <img src="images/facebook.svg" class="zeddHome__socialIcon"></a>
             </li>
         </ul>
     </div>
@@ -52,18 +54,18 @@
             </a>
             <ul class="zeddHome__socialLinks">
                 <li>
-                    <a href="https://twitter.com/zeddpay">
+                    <a href="https://twitter.com/zeddpay" target="_blank">
                         <img src="images/twitter.svg" class="zeddHome__socialIcon"></a>
                     </a>
 
                 </li>
                 <li>
-                    <a href="https://Instagram.com/zeddapp">
+                    <a href="https://instagram.com/zeddapp" target="_blank">
                         <img src="images/instagram.svg" class="zeddHome__socialIcon"></a>
                     </a>
                 </li>
                 <li>
-                    <a href="https://Facebook.com/zeddpay ">
+                    <a href="https://Facebook.com/zeddpay" target="_blank">
                         <img src="images/facebook.svg" class="zeddHome__socialIcon"></a>
                     </a>
 
@@ -106,6 +108,16 @@
             </section>
         </div>
     </div>
+    <div class="zeddHome__modalOverlay" style="display: none;">
+        <div class="zeddHome__modalBox">
+            <h1>Congrats Gen-Z</h1>
+            <div class="zeddHome__modalMemojiContainer">
+                <img src="images/happy-memoji.svg" alt="Congratulations Memoji" />
+            </div>
+            <p>You have successfully been added to the waitlist.</p>
+            <button class="zeddHome__modalCloseButton">Close</button>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script>
         let tl = gsap.timeline({
@@ -124,6 +136,7 @@
             stagger: 0.2,
         })
     </script>
+    <script src="public/main.js"></script>
 </body>
 
 </html>

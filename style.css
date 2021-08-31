@@ -3,9 +3,8 @@
 body {
     margin: 0;
     background-color: #121212;
-    opacity: 90%;
-    background-blend-mode: darken;
     font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
 .zeddHome__cover {
@@ -17,6 +16,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.zeddHome__cover .zeddHome__logo {
+    height: 176px;
+    width: 735px;
+    margin-right: 10%;
 }
 
 
@@ -133,11 +138,9 @@ li a:hover:not(.active) {
 
 .search-wrapper {
     width: 530px;
-    margin: 20px auto 0px auto;
     border-radius: 40px;
     background: transparent;
     padding-bottom: 40px;
-    float: left;
 }
 
 
@@ -183,12 +186,141 @@ li a:hover:not(.active) {
     filter: blur(.75px);
 }
 
+.zeddHome__socialLinks {
+    position: relative;
+    display: flex;
+}
+
+.zeddHome__form {
+    width: 100%;
+}
+
+.illus img {
+    height: 430px;
+    width: 430px;
+}
+
+::placeholder {
+    font-family: 'Poppins';
+    font-size: 13px;
+}
+
+.zeddHome__socialIcon {
+    background: #4a4a4a47;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.zeddHome__modalOverlay {
+    background: #0C0C0C;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zeddHome__modalBox {
+    width: 530px;
+    height: 60%;
+    background: #121212;
+    border-radius: 8px;
+    color: #fafafa;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.zeddHome__modalMemojiContainer {
+    background: #1D1D1D;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    height: 100px;
+    width: 100px;
+    border-radius: 164%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zeddHome__modalBox h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.zeddHome__modalBox p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: #9E9E9E;
+    width: 60%;
+}
+
+.zeddHome__modalCloseButton {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 55px;
+    width: 185px;
+    font-family: 'Poppins';
+    background: #0089FF;
+    border-radius: 8px;
+    color: #fafafa;
+}
+
 @media (min-width: 600px) {
     .hee {
         font-size: 18px;
     }
     .zeddHome__mobile {
         display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .section1 {
+        padding: 0;
+    }
+    .zeddHome__tagline h2 {
+        font-size: 24px;
+        line-height: 44px;
+        width: 100%;
+    }
+    .zeddHome__desktop {
+        max-width: 100vw;
+        margin: 0 50px;
+    }
+    .he {
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .search-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    .search-wrapper input {
+        margin-bottom: 15px;
+    }
+    .search-wrapper button {
+        width: 282px;
+    }
+    .zeddHome__illustration {
+        width: 100%;
+    }
+    .illus img {
+        width: 100%;
+        height: 100%;
+        width: 120%;
+        height: 100%;
+        margin-left: -20px;
     }
 }
 
@@ -287,34 +419,24 @@ li a:hover:not(.active) {
         text-align: center;
         line-height: 30px;
     }
+    .zeddHome__modalBox {
+        width: 85%;
+    }
+    .zeddHome__modalBox h1 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .zeddHome__modalBox p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .zeddHome__modalCloseButton {
+        height: 45px;
+        width: 145px;
+    }
 }
 
 .zeddHome__mobile {
     padding: 0 35px;
     margin-top: 34px;
-}
-
-.zeddHome__socialLinks {
-    position: relative;
-    display: flex;
-}
-
-.zeddHome__form {
-    width: 100%;
-}
-
-.illus img {
-    height: 430px;
-    width: 430px;
-}
-
-::placeholder {
-    font-family: 'Poppins';
-    font-size: 13px;
-}
-
-.zeddHome__socialIcon {
-    background: #4a4a4a47;
-    border-radius: 8px;
-    padding: 10px;
 }

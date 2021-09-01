@@ -19,7 +19,7 @@ body {
 }
 
 .zeddHome__cover .zeddHome__logo {
-    height: 176px;
+    height: 50px;
     width: 735px;
     margin-right: 10%;
 }
@@ -127,9 +127,8 @@ li a:hover:not(.active) {
 
 .he {
     font-family: 'Poppins';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
+    font-weight: 200;
+    font-size: 16px;
     width: 75%;
     line-height: 27px;
     letter-spacing: 0.009em;
@@ -161,6 +160,10 @@ li a:hover:not(.active) {
     letter-spacing: 0.009em;
     color: #fafafafa;
     outline: none;
+}
+
+input.error_active {
+    border: 1px solid #e33527 !important;
 }
 
 
@@ -308,8 +311,7 @@ li a:hover:not(.active) {
     }
     .search-wrapper input {
         margin-bottom: 15px;
-        text-size: 12px;
-        fony-style: regular;
+        font-size: 12px;
     }
     .search-wrapper button {
         width: 282px;
@@ -326,9 +328,21 @@ li a:hover:not(.active) {
     }
 }
 
+.error_isActiveText {
+    border-radius: 8px;
+    color: red;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding-left: 10px;
+    margin-top: 7px;
+}
+
 @media (max-width: 600px) {
     .zeddHome__desktop {
         display: none;
+    }
+    .error_isActiveText {
+        margin-top: -7px;
     }
     .zeddHome__tagline img {
         position: absolute;
@@ -341,7 +355,7 @@ li a:hover:not(.active) {
         width: 100%;
         height: 54px;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 11px;
         line-height: 18px;
         text-align: center;
         letter-spacing: 0.009em;

@@ -308,6 +308,8 @@ li a:hover:not(.active) {
     }
     .search-wrapper input {
         margin-bottom: 15px;
+        text-size: 12px;
+        fony-style: regular;
     }
     .search-wrapper button {
         width: 282px;

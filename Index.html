@@ -29,8 +29,10 @@
             <div class="e129_165"></div>
         </section>
         <form class="zeddHome__form">
-            <input type="email" placeholder="enter your email address" required>
+            <input type="email" placeholder="enter your email address">
+            <div class="error_isActiveText" style="display: none;"></div>
             <button type="submit">Request Access</button>
+
         </form>
         <ul class="zeddHome__socialLinks">
             <li>
@@ -97,8 +99,9 @@
                     </p>
                 </section>
                 <form class="search-wrapper" action="http://zeddpay-newsletter-api.herokuapp.com/api/add" method="post">
-                    <input type="email" placeholder="enter your email address" required>
+                    <input type="email" placeholder="enter your email address">
                     <button type="submit">Request Access</button>
+                    <div class="error_isActiveText desktop" style="display: none;"></div>
                 </form>
             </section>
             <section class="zeddHome__illustration">

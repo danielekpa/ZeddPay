@@ -259,7 +259,7 @@ input.error_active {
 
 .zeddHome__modalMemojiContainer {
     background: #1D1D1D;
-    mix-blend-mode: normal;
+    mix-blend-mode: difference;
     opacity: 0.5;
     height: 100px;
     width: 100px;

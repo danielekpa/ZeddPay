@@ -45,6 +45,8 @@ const validate = async (buttonEl, inputField, errorField) => {
         body: JSON.stringify({ email: inputField.value})
       })
       if (response.status !== 201) {
+        buttonEl.innerHTML = 'Request Access'
+        buttonEl.disabled = false
         inputField.classList.add('error_active')
         errorField.innerHTML = "Nice Try, Email Already Exists!😂"
         errorField.style.display = 'block'

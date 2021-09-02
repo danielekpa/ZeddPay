@@ -5,7 +5,7 @@ const closeButton = document.querySelector('.zeddHome__modalCloseButton')
 const btnsArray = [mobileFormButton, desktopFormButton]
 
 
-const validate = async (inputField, errorField) => {
+const validate = async (buttonEl, inputField, errorField) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;    
   if (inputField.value.length == 0) {
     inputField.classList.add('error_active')
@@ -26,28 +26,44 @@ const validate = async (inputField, errorField) => {
       errorField.style.display = 'none'
     }, 1500)
   } else {
-    const response = await fetch('https://zeddpay-newletter-api.herokuapp.com/api/users/add',  {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json'
-        
-      },
-      body: JSON.stringify({ email: inputField.value})
-    })
-    if (response.status !== 201) {
-      inputField.classList.add('error_active')
-      errorField.innerHTML = "Nice Try, Email Already Exists!😂"
-      errorField.style.display = 'block'
-      setTimeout(() => {
-        inputField.classList.remove('error_active')
-        errorField.innerHTML = ""
-        errorField.style.display = 'none'
-      }, 1500)
-    } else {
-      inputField.value = ''
-      overlayContainer.style.display = 'flex'      
+    try {
+      
+      buttonEl.innerHTML = ''
+      buttonEl.style.display = 'flex';
+      buttonEl.style.justifyContent = 'center';
+      buttonEl.style.alignItems = 'center';
+      const newSpan = document.createElement('div')
+      buttonEl.disabled = true
+      newSpan.classList.add('loader')
+      buttonEl.appendChild(newSpan)
+      const response = await fetch('https://zeddpay-newletter-api.herokuapp.com/api/users/add',  {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'        
+        },
+        body: JSON.stringify({ email: inputField.value})
+      })
+      if (response.status !== 201) {
+        inputField.classList.add('error_active')
+        errorField.innerHTML = "Nice Try, Email Already Exists!😂"
+        errorField.style.display = 'block'
+        setTimeout(() => {
+          inputField.classList.remove('error_active')
+          errorField.innerHTML = ""
+          errorField.style.display = 'none'
+        }, 1500)
+      } else {
+        inputField.value = ''
+        overlayContainer.style.display = 'flex'  
+        buttonEl.innerHTML = 'Request Access'    
+      }
+    } catch (e) {      
+        buttonEl.innerHTML = 'Request Access'
+        buttonEl.disabled = false
+        alert('Something went wrong, Try Again')        
     }
+    
   }         
 }
 
@@ -55,8 +71,8 @@ const validate = async (inputField, errorField) => {
 mobileFormButton.addEventListener('click', (e) => {
   e.preventDefault()
   const mobileInput = document.querySelector('.zeddHome__form input')
-  const errorEl = document.querySelector('.error_isActiveText')  
-  validate(mobileInput, errorEl)
+  const errorEl = document.querySelector('.error_isActiveText')    
+  validate(mobileFormButton, mobileInput, errorEl)  
 })
 
 
@@ -64,7 +80,7 @@ desktopFormButton.addEventListener('click', (e) => {
   e.preventDefault()
   const desktopInput = document.querySelector('.search-wrapper input')
   const errorEl = document.querySelector('.error_isActiveText.desktop')  
-  validate(desktopInput, errorEl)
+  validate(desktopFormButton, desktopInput, errorEl)
 })
 
 closeButton.addEventListener('click', () => {
